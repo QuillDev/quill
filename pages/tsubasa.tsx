@@ -39,7 +39,7 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
       </div>
 
       {/* General Table */}
-      <ModuleTable name="Hentai Module" id="nsfwModule">
+      <ModuleTable name="General Module" id="generalModule">
         <ModuleCommand
           name="help"
           description="Brings you to the help website."
