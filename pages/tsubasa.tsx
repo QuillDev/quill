@@ -152,7 +152,7 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
         />
       </ModuleTable>
 
-      <ModuleTable name="Hentai Module" id="nsfwModule">
+      <ModuleTable name="Language Module" id="languageModule">
         <ModuleCommand
           name="kanji"
           description="Gets a random kanji at the given JLPT level."
