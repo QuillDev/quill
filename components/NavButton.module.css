@@ -1,0 +1,20 @@
+.link {
+    @apply flex-col 
+    text-lg 
+    font-bold 
+    p-3 
+    border-b-2 
+    border-transparent
+    transition
+    ease-in-out
+    duration-300
+    ;
+}
+
+.right {
+    @apply ml-auto;
+}
+
+.link:hover {
+    @apply border-red-500;
+}

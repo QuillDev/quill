@@ -1,0 +1,32 @@
+.tableContainer {
+    @apply px-36;
+}
+
+.table {
+  @apply border-collapse w-full mx-auto;
+}
+
+.table td,
+.table th {
+  @apply border-2 border-solid border-white p-3.5;
+}
+
+.table tr:nth-child(even) {
+  @apply bg-dark-200;
+}
+
+.table th {
+  @apply py-4 text-left bg-dark-400;
+}
+
+.theader {
+    @apply text-center text-3xl py-2;
+}
+
+.req {
+    @apply text-red-400;
+}
+
+.opt {
+    @apply text-blue-400;
+}

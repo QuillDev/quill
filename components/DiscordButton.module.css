@@ -1,0 +1,18 @@
+.discordButton {
+    @apply bg-dark-200 
+    rounded-xl
+    border-blue-800
+    p-2 
+    ease-in-out 
+    transition
+    opacity-80
+    ;
+}
+
+.discordButton:hover {
+    @apply
+    border-r-2
+    border-b-2
+    opacity-100
+    ;
+}

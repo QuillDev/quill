@@ -1,0 +1,45 @@
+.fadeIn {
+  @apply transition-all opacity-0 duration-1000;
+}
+
+.loaded {
+  @apply opacity-100;
+}
+
+.card {
+  @apply flex
+    flex-col
+    justify-center
+    items-center
+    text-white
+    shadow-md
+    w-full
+    h-full
+    rounded-md
+    transition
+    duration-500
+    overflow-hidden
+    bg-cover
+    bg-center
+    bg-no-repeat
+    p-6
+    text-center;
+}
+
+.card:hover {
+  @apply shadow-md;
+  transform: translateY(-3px) scale(1.01);
+}
+
+.cardHeader {
+  @apply text-3xl pb-2;
+}
+
+.basicGrid {
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 2fr));
+}
+
+.redCard {
+    background-color: ;
+}
