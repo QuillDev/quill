@@ -1,4 +1,3 @@
-import SimpleBar from "simplebar-react";
 import DiscordButton from "../components/DiscordButton";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
