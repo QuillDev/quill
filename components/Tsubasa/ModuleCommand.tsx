@@ -16,7 +16,7 @@ const buildParams = (params?: Parameter[]) => {
   let nodes = [];
   params.forEach((param) => {
     nodes.push(
-      <span key={param.name} className={`inline-block ${param.required ? "req" : "opt"}`}>
+      <span key={param.name} className={`inline-block pr-1 ${param.required ? "req" : "opt"}`}>
         [{(!param.required ? "?" : "") + param.name}]
       </span>
     );

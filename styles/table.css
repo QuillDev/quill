@@ -1,18 +1,24 @@
 .tableContainer {
-    @apply px-36;
+  @apply px-36;
 }
 
 .table {
-  @apply border-collapse w-full mx-auto;
+  @apply border-collapse 
+  w-full 
+  mx-auto;
 }
 
 .table td,
 .table th {
-  @apply border-2 border-solid border-white p-3.5;
+  @apply border-2 
+  border-solid 
+  border-gray-300 
+  p-3.5
+  bg-dark-200;
 }
 
 .table tr:nth-child(even) {
-  @apply bg-dark-200;
+  @apply bg-dark-300;
 }
 
 .table th {
@@ -20,13 +26,18 @@
 }
 
 .theader {
-    @apply text-center text-3xl py-2;
+  @apply 
+  text-center 
+  text-4xl
+  py-2
+  italic
+  ;
 }
 
 .req {
-    @apply text-red-400;
+  @apply text-red-400;
 }
 
 .opt {
-    @apply text-blue-400;
+  @apply text-blue-400;
 }

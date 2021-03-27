@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        "main": "url(../assets/bg-image.png)"
+      }),
       colors: {
         dark: {
           "400": "#0a0a0a",

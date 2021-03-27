@@ -7,7 +7,7 @@ interface TsubasaProps {}
 
 const Tsubasa: React.FC<TsubasaProps> = ({}) => {
   return (
-    <div>
+    <div className="bg-main bg-fixed">
       <head>
         <title>Tsubasa「つばさ」</title>
       </head>
@@ -28,16 +28,53 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
       </header>
 
       {/* Key */}
-      <div className="text-center text-3xl">
+      <div className="text-center text-x1">
         <div className="underline">Argument Key</div>
         <div className="inline-block px-2">
-          Required <div className="w-6 h-6 bg-red-400 inline-block" />
+          Required <div className="w-3 h-3 bg-red-400 inline-block" />
         </div>
         <div className="inline-block">
-          Optional <div className="w-6 h-6 bg-blue-400 inline-block" />
+          Optional <div className="w-3 h-3 bg-blue-400 inline-block" />
         </div>
       </div>
 
+      {/* General Table */}
+      <ModuleTable name="Hentai Module" id="nsfwModule">
+        <ModuleCommand
+          name="help"
+          description="Brings you to the help website."
+        />
+        <ModuleCommand
+          name="version"
+          description="Get the current version of Tsubasa."
+        />
+        <ModuleCommand
+          name="ping"
+          description="Gets the current discord ping & bot delay.."
+        />
+        <ModuleCommand
+          name="pfp"
+          description="Gets the profile picture of the tagged user"
+          params={[{ name: "@user" }]}
+        />
+        <ModuleCommand
+          name="vote"
+          description="Vote for Tsubasa on bot list sites."
+        />
+        <ModuleCommand
+          name="donate"
+          description="Brings up the donation URL for QuillDev (broke college student)."
+        />
+        <ModuleCommand
+          name="roll"
+          description="Roll a die between the given numbers."
+          params={[{ name: "min|max" }, { name: "max" }]}
+        />
+        <ModuleCommand
+          name="source"
+          description="Get the source repository for Tsubasa."
+        />
+      </ModuleTable>
       {/* Music Table */}
       <ModuleTable name="Music Module" id="musicModule">
         <ModuleCommand
@@ -46,6 +83,27 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
           params={[{ name: "query", required: true }]}
         />
         <ModuleCommand name="skip" description="Skips the current track." />
+        <ModuleCommand
+          name="playing"
+          description="Gets the currently playing track and it's progress"
+        />
+        <ModuleCommand
+          name="queue"
+          description="Gives the current song queue."
+        />
+        <ModuleCommand
+          name="pause"
+          description="Toggles whether the player is paused."
+        />
+        <ModuleCommand
+          name="seek"
+          description="Seeks to the given point in the song"
+          params={[{ name: "seconds", required: true }]}
+        />
+        <ModuleCommand
+          name="stop"
+          description="Completely stops the music player."
+        />
       </ModuleTable>
 
       {/* Anime Module */}
@@ -90,6 +148,15 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
           name="doujintop"
           description="Gets the top 5 doujins today for the given query"
           params={[{ name: "query" }]}
+          nsfw={true}
+        />
+      </ModuleTable>
+
+      <ModuleTable name="Hentai Module" id="nsfwModule">
+        <ModuleCommand
+          name="kanji"
+          description="Gets a random kanji at the given JLPT level."
+          params={[{ name: "level (1-5)" }]}
           nsfw={true}
         />
       </ModuleTable>
