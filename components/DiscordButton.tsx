@@ -5,7 +5,7 @@ import dc from "../assets/discord.svg";
 import styles from "./DiscordButton.module.css";
 interface DiscordButtonProps {}
 
-const discordButton = <img src={dc} className="w-14" />;
+const discordButton = <img src={dc} className="w-14" alt="discord.png" />;
 
 const discordWidget = (
   <iframe

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Index.module.css";
-
+import Head from "next/head";
 import TypeScriptSVG from "../assets/typescript.svg";
 import CSharpSVG from "../assets/csharp.svg";
 import JavaSVG from "../assets/java.svg";
@@ -11,22 +11,34 @@ const Index: React.FC<indexProps> = ({}) => {
   const [style, setStyle] = useState(styles.fadeIn);
   useEffect(() => {
     setStyle(`${style} ${styles.loaded}`);
-  });
+  }, []);
 
   return (
     <div>
-      <div className={styles.quillText}>
-        {"<Quilldev/>"}
-      </div>
+      <Head>
+        <title>QuillDev</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Information about the software developer Quill aka QuillDev
+          and his projects."
+        />
+      </Head>
 
-			{/* Create the grid system */}
+      <div className={styles.quillText}>{"<Quilldev/>"}</div>
+
+      {/* Create the grid system */}
       <div className={style + " p-2"}>
         <section className={styles.basicGrid}>
           {/* Card for Tsubasa */}
           <article className={styles.card + " bg-dark-red"}>
             <div className="flex text-5xl items-center">
               <span className="pr-2">Tsubasa</span>
-              <img className="align-middle w-16" src={TypeScriptSVG} />
+              <img
+                className="align-middle w-16"
+                src={TypeScriptSVG}
+                alt="TypeScript"
+              />
             </div>
             <div className="text-lg pt-2">
               Tsubasa is a multi-purpose discord bot written in typescript,
@@ -36,12 +48,12 @@ const Index: React.FC<indexProps> = ({}) => {
             <div className="pt-2">
               <div className="inline-block pr-2">
                 <Link href="/tsubasa">
-                  <div className="bg-red-500 p-2 rounded-sm">Learn More</div>
+                  <div className="bg-red-700 p-2 rounded-sm">Learn More</div>
                 </Link>
               </div>
               <div className="inline-block">
                 <Link href="https://github.com/quilldev/tsubasajs">
-                  <div className="bg-red-500 p-2 rounded-sm">Source Code</div>
+                  <div className="bg-red-700 p-2 rounded-sm">Source Code</div>
                 </Link>
               </div>
             </div>
@@ -50,7 +62,7 @@ const Index: React.FC<indexProps> = ({}) => {
           <article className={styles.card + " bg-dark-blue"}>
             <div className="flex text-5xl items-center">
               <span className="pr-2">NetJoy</span>
-              <img className="align-middle w-20" src={CSharpSVG} />
+              <img className="align-middle w-20" src={CSharpSVG} alt="CSharp" />
             </div>
             <div className="text-lg pt-2">
               NetJoy is a peer to peer CLI controller input sharing application.
@@ -59,7 +71,7 @@ const Index: React.FC<indexProps> = ({}) => {
             </div>
             <div className="inline-block pt-2">
               <Link href="https://github.com/quilldev/netjoy">
-                <div className="bg-blue-500 p-2 rounded-sm">Source Code</div>
+                <div className="bg-blue-700 p-2 rounded-sm">Source Code</div>
               </Link>
             </div>
           </article>
@@ -67,7 +79,7 @@ const Index: React.FC<indexProps> = ({}) => {
           <article className={styles.card + " bg-dark-yellow"}>
             <div className="flex text-5xl items-center">
               <span className="pr-2">QuillKanji</span>
-              <img className="align-middle w-18" src={JavaSVG} />
+              <img className="align-middle w-18" src={JavaSVG} alt="java.svg" />
             </div>
             <div className="text-lg pt-2">
               QuillKanji is a Java based desktop application that uses OCR
@@ -75,7 +87,7 @@ const Index: React.FC<indexProps> = ({}) => {
             </div>
             <div className="inline-block pt-2">
               <Link href="https://github.com/quilldev/quillkanji">
-                <div className="bg-yellow-500 p-2 rounded-sm">Source Code</div>
+                <div className="bg-yellow-700 p-2 rounded-sm">Source Code</div>
               </Link>
             </div>
           </article>
