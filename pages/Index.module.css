@@ -41,5 +41,26 @@
 }
 
 .redCard {
-    background-color: ;
+  background-color: ;
+}
+
+.quillText {
+  @apply text-center text-8xl font-mono py-5;
+}
+
+@media only screen and (max-width: 700px) {
+  .quillText {
+    @apply text-5xl;
+  }
+  .card {
+    @apply text-base;
+  }
+  .cardHeader {
+    @apply text-lg pb-2;
+  }
+
+  .basicGrid {
+    @apply grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 2fr));
+  }
 }

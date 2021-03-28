@@ -11,7 +11,6 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
         <NavItem href="/">Home</NavItem>
         <NavItem href="/tsubasa">つばさ</NavItem>
         <NavItem href="https://github.com/quilldev">GitHub</NavItem>
-        <NavItem right={true}>Login</NavItem>
       </div>
     </div>
   );

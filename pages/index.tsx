@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ReactTypingEffect from "react-typing-effect";
 import styles from "./Index.module.css";
 
 import TypeScriptSVG from "../assets/typescript.svg";
@@ -16,8 +15,8 @@ const Index: React.FC<indexProps> = ({}) => {
 
   return (
     <div>
-      <div className="text-center text-8xl font-mono pb-5">
-        <ReactTypingEffect text={"<QuillDev/>"} />
+      <div className={styles.quillText}>
+        {"<Quilldev/>"}
       </div>
 
 			{/* Create the grid system */}

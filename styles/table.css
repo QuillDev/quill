@@ -1,5 +1,5 @@
 .tableContainer {
-  @apply px-36;
+  @apply px-12;
 }
 
 .table {
@@ -26,12 +26,10 @@
 }
 
 .theader {
-  @apply 
-  text-center 
+  @apply text-center 
   text-4xl
   py-2
-  italic
-  ;
+  italic;
 }
 
 .req {
@@ -40,4 +38,42 @@
 
 .opt {
   @apply text-blue-400;
+}
+
+.card {
+  @apply 
+  shadow-md 
+  w-full 
+  h-full 
+  rounded-md 
+  overflow-hidden
+  text-xl
+  flex
+  flex-col
+  justify-center
+  items-center
+  transition-all
+  duration-500
+  bg-cover
+  bg-center
+  bg-no-repeat
+  bg-dark-200
+  border-dark-400
+  border-2
+  ;
+}
+
+.basic-grid {
+  @apply grid gap-4 m-auto;
+  grid-template-columns: repeat(auto-fill, minmax(12.5%, 1fr));
+}
+
+@media only screen and (max-width: 500px) {
+  .tableContainer {
+    @apply px-0;
+  }
+  .basic-grid {
+    @apply grid gap-2;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
 }
