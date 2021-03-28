@@ -1,0 +1,16 @@
+.button {
+    @apply 
+    inline-block 
+    px-4
+    py-2
+    bg-dark-400
+    mx-1
+    rounded
+    border-gray-700
+    border-2
+    ;
+}
+
+.navContainer {
+    @apply mx-auto mt-2;
+}

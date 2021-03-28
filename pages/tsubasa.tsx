@@ -3,6 +3,8 @@ import ModuleCommand from "../components/Tsubasa/ModuleCommand";
 import ModuleTable from "../components/Tsubasa/ModuleTable";
 
 import tsubasaGif from "../assets/Tsubasa.gif";
+import Link from "next/link";
+import styles from "../styles/tsubasa.module.css";
 interface TsubasaProps {}
 
 const Tsubasa: React.FC<TsubasaProps> = ({}) => {
@@ -26,7 +28,6 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
           />
         </div>
       </header>
-
       {/* Key */}
       <div className="text-center text-x1">
         <div className="underline">Argument Key</div>
@@ -38,6 +39,32 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
         </div>
       </div>
 
+      {/* TODO: Change this to a flex grid */}
+      <div className="flex">
+        <div className={styles.navContainer}>
+          <Link href="#animeModule">
+            <div className={styles.button}>Anime</div>
+          </Link>
+          <Link href="#musicModule">
+            <div className={styles.button}>Music</div>
+          </Link>
+          <Link href="#nsfwModule">
+            <div className={styles.button}>Hentai</div>
+          </Link>
+          <Link href="#generalModule">
+            <div className={styles.button}>General</div>
+          </Link>
+          <Link href="#languageModule">
+            <div className={styles.button}>Language</div>
+          </Link>
+          <Link href="#gameModule">
+            <div className={styles.button}>Games</div>
+          </Link>
+          <Link href="#gameToolsModule">
+            <div className={styles.button}>GameTools</div>
+          </Link>
+        </div>
+      </div>
       {/* General Table */}
       <ModuleTable name="General Module" id="generalModule">
         <ModuleCommand
@@ -152,12 +179,26 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
         />
       </ModuleTable>
 
+      {/* Language Module */}
       <ModuleTable name="Language Module" id="languageModule">
         <ModuleCommand
           name="kanji"
           description="Gets a random kanji at the given JLPT level."
           params={[{ name: "level (1-5)" }]}
-          nsfw={true}
+        />
+      </ModuleTable>
+
+      {/* Game Module */}
+      <ModuleTable name="Game Module" id="gameModule">
+        <ModuleCommand name="deathroll" description="Starts a deathroll game" />
+      </ModuleTable>
+
+      {/* GameTools Module */}
+      <ModuleTable name="GameTools Module" id="gameToolsModule">
+        <ModuleCommand
+          name="csmarket"
+          description="Gets CSGO Market price data."
+          params={[{ name: "query" }]}
         />
       </ModuleTable>
     </div>

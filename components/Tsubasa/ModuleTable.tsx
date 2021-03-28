@@ -7,7 +7,7 @@ interface ModuleTableProps {
 
 const ModuleTable: React.FC<ModuleTableProps> = ({ children, name, id }) => {
   return (
-    <div className="tableContainer" id={id}>
+    <div className="tableContainer py-4" id={id}>
       <div className="theader">{name}</div>
       <table className="table">
         <thead>
