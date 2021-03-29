@@ -126,9 +126,11 @@ const Tsubasa: React.FC<TsubasaProps> = ({}) => {
               name="queue"
               description="Gives the current song queue."
             />
+            <ModuleCommand name="pause" description="Pauses the player." />
+            <ModuleCommand name="resume" description="Resumes the player." />
             <ModuleCommand
-              name="pause"
-              description="Toggles whether the player is paused."
+              name="autoplay"
+              description="Toggles whether to use autoplay."
             />
             <ModuleCommand
               name="seek"
