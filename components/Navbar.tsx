@@ -10,6 +10,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className={NavStyles.bar}>
         <NavItem href="/">Home</NavItem>
         <NavItem href="/tsubasa">つばさ</NavItem>
+        <NavItem href="/donate">Donate</NavItem>
         <NavItem href="https://github.com/quilldev">GitHub</NavItem>
       </div>
     </div>

@@ -13,3 +13,10 @@ declare module "\*.gif" {
 
     //DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>
 }
+declare module "\*.png" {
+    import React = require("react");
+    export const ReactComponent: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>>;
+    const src: string; export default src;
+
+    //DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>
+}

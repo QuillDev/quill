@@ -1,0 +1,24 @@
+.donateButton {
+  @apply text-center
+    rounded-b-sm
+    p-2
+    w-full
+    transition-all
+    duration-200;
+}
+
+.donateContainer {
+    @apply
+    grid 
+    justify-center
+    xl:grid-flow-col 
+    xl:px-10
+    xl:gap-12
+}
+
+.donateButtonInactive {
+  @apply bg-red-700;
+}
+.donateButtonActive {
+  @apply bg-green-700;
+}

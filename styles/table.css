@@ -3,7 +3,8 @@
 }
 
 .table {
-  @apply border-collapse 
+  @apply 
+  border-collapse 
   w-full 
   mx-auto;
 }

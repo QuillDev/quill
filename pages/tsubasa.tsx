@@ -5,21 +5,12 @@ import ModuleTable from "../components/Tsubasa/ModuleTable";
 import tsubasaGif from "../assets/Tsubasa.gif";
 import Link from "next/link";
 import styles from "../styles/tsubasa.module.css";
-import Head from "next/head";
+
 interface TsubasaProps {}
 
 const Tsubasa: React.FC<TsubasaProps> = ({}) => {
   return (
     <>
-      {/* <Head>
-        <title>Tsubasa「つばさ」</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          name="description"
-          content="List of commands and information for the Tsubasa Discord bot
-          by QuillDev."
-        />
-      </Head> */}
       <div className={styles.tsubasaBG}>
         {/* Heading */}
         <header>
