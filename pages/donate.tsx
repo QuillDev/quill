@@ -1,6 +1,6 @@
 import React from "react";
 
-import btcQR from "../assets/btc-qr.png";
+import btcQR from "../assets/btc-qr.svg";
 import kofiQR from "../assets/kofi-qr-code.svg";
 import cashappQR from "../assets/cashapp-qr.png";
 import DonateComponent from "../components/Donate/DonateComponent";
