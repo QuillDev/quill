@@ -19,7 +19,7 @@ const donate: React.FC<donateProps> = ({}) => {
           qr={btcQR}
           type={"Bitcoin"}
           target={
-            "bc1qx8xfkhnkq8wsg8argwpxj9ksve7txk3tahndatxry93e70jty52sdg5d49"
+            "bc1qekjh9azgkt3dvtnx2m7462s2s67c0xzm5jp6jf"
           }
           btnLabel={"Copy BTC Address"}
         />
