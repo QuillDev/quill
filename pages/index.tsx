@@ -4,6 +4,8 @@ import Head from "next/head";
 import TypeScriptSVG from "../assets/typescript.svg";
 import CSharpSVG from "../assets/csharp.svg";
 import JavaSVG from "../assets/java.svg";
+import StratumLogo from "../assets/stratum.png";
+import MinecraftSVG from "../assets/minecraft.svg";
 import Link from "next/link";
 interface indexProps {}
 
@@ -88,6 +90,23 @@ const Index: React.FC<indexProps> = ({}) => {
             <div className="inline-block pt-2">
               <Link href="https://github.com/quilldev/quillkanji">
                 <div className="bg-yellow-700 p-2 rounded-sm">Source Code</div>
+              </Link>
+            </div>
+          </article>
+          {/* Car for Strautm */}
+          <article className={styles.card + " bg-dark-blue"}>
+            <div className="flex text-5xl items-center">
+              <span className="pr-2">Stratum</span>
+              <img className="align-middle w-18" src={StratumLogo} alt="stratum.svg" />
+            </div>
+            <div className="text-lg pt-2">
+              Stratum is a group of Minecraft plugins written using PaperMC for Bukkit servers.
+              Stratum has custom economy systems, enemies, weapons, crafting, upgrades, bosses, and
+              much more!
+            </div>
+            <div className="inline-block pt-2">
+              <Link href="https://github.com/quilldev/stratumsurvival">
+                <div className="bg-blue-700 p-2 rounded-sm">Source Code</div>
               </Link>
             </div>
           </article>

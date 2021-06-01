@@ -1,10 +1,10 @@
 import React from "react";
 
 import btcQR from "../assets/btc-qr.svg";
-import kofiQR from "../assets/kofi-qr-code.svg";
 import cashappQR from "../assets/cashapp-qr.png";
 import DonateComponent from "../components/Donate/DonateComponent";
 import styles from "../components/Donate/DonateComponent.module.css";
+import KofiComponent from "../components/Donate/KofiComponent";
 interface donateProps {}
 
 const donate: React.FC<donateProps> = ({}) => {
@@ -18,9 +18,7 @@ const donate: React.FC<donateProps> = ({}) => {
         <DonateComponent
           qr={btcQR}
           type={"Bitcoin"}
-          target={
-            "bc1qekjh9azgkt3dvtnx2m7462s2s67c0xzm5jp6jf"
-          }
+          target={"bc1qekjh9azgkt3dvtnx2m7462s2s67c0xzm5jp6jf"}
           btnLabel={"Copy BTC Address"}
         />
 
@@ -31,13 +29,14 @@ const donate: React.FC<donateProps> = ({}) => {
           btnLabel={"Copy $CashTag"}
         />
 
-        <DonateComponent
+        <KofiComponent/>
+        {/* <DonateComponent
           qr={kofiQR}
           type="KoFi"
           btnLabel={"Go to KoFi"}
           target={"https://ko-fi.com/quilldev"}
           url={true}
-        />
+        /> */}
       </div>
     </div>
   );
